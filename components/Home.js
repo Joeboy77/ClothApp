@@ -1,4 +1,4 @@
-import { View, Image, SafeAreaView, StyleSheet, TextInput, Text, FlatList, Platform} from "react-native";
+import { View, Image, SafeAreaView, StyleSheet, TextInput, Text, FlatList, Platform } from "react-native";
 import { AntDesign, Entypo, Feather } from '@expo/vector-icons';
 import  logo1  from '../assets/interface.png'
 import logo2 from '../assets/profile-user.png'
@@ -104,7 +104,8 @@ export default function Home () {
         </View>
     )
     return(
-       
+
+      
         <SafeAreaView>
             <View>
                 <View style={styles.logoHead}>
@@ -143,9 +144,10 @@ export default function Home () {
             <View style={styles.footer}>
             <Entypo name="home" size={30} color="black" style={styles.home}/>
                 <AntDesign name="hearto" size={30} color="black" />
-                <Feather name="shopping-bag" size={30} color="black" style={styles.shop}/>
+                <Feather name="shopping-bag" size={30} color="black" style={styles.shop} />
             </View>
         </SafeAreaView>
+        
         
     )
 }
