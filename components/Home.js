@@ -1,4 +1,4 @@
-import { View, Image, SafeAreaView, StyleSheet, TextInput, Text, FlatList, Platform } from "react-native";
+import { View, Image, SafeAreaView, StyleSheet, TextInput, Text, FlatList, Platform, ScrollView } from "react-native";
 import { AntDesign, Entypo, Feather } from '@expo/vector-icons';
 import  logo1  from '../assets/interface.png'
 import logo2 from '../assets/profile-user.png'
@@ -106,7 +106,8 @@ export default function Home () {
     return(
 
       
-        <SafeAreaView>
+        <SafeAreaView >
+            <ScrollView>
             <View>
                 <View style={styles.logoHead}>
                     <Image source={logo1} alt="Logo1" style={styles.logo}/>
@@ -141,6 +142,7 @@ export default function Home () {
             showsHorizontalScrollIndicator={false}
             />
             </View>
+            </ScrollView>
             <View style={styles.footer}>
             <Entypo name="home" size={30} color="black" style={styles.home}/>
                 <AntDesign name="hearto" size={30} color="black" />
@@ -153,6 +155,7 @@ export default function Home () {
 }
 
 const styles =  StyleSheet.create({
+   
     logoHead: {
         position: 'relative',
         display: 'flex',
@@ -243,7 +246,6 @@ const styles =  StyleSheet.create({
     },
     footer: {
         marginTop: -30,
-        
         height: 70,
         backgroundColor: '#fff',
         display: 'flex',
